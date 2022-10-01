@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .con {
+        text-align: center;
+        height: 300px;
+        width: 500px;
+        background-color: Aqua;
+        box-shadow: 0px 0px 10px black;
+        margin: 150px auto;
+        padding: 50px;
+      }
+      select {
+        height: 30px;
+      }
+      h2 {
+        margin-top: 80px;
+      }
+    </style>
+    <script>
+      function fnFont(e) {
+        var h2R = document.getElementById("h2");
+        console.log(e.target.value);
+        switch (e.target.value) {
+          case "10":
+            h2R.style.fontSize = "10px";
+            break;
+          case "20":
+            h2R.style.fontSize = "20px";
+            break;
+          case "30":
+            h2R.style.fontSize = "30px";
+            break;
+          case "40":
+            h2R.style.fontSize = "40px";
+            break;
+          case "50":
+            h2R.style.fontSize = "50px";
+            break;
+          case "Select Font Size":
+            h2R.style.fontSize = "1.5em";
+            break;
+        }
+      }
+
+      function fnFamily(e) {
+        var h2R = document.getElementById("h2");
+        console.log(e.target.value);
+        switch (e.target.value) {
+          case "Arial":
+            h2R.style.fontFamily = "Arial";
+            break;
+          case "Calibri":
+            h2R.style.fontFamily = "Calibri";
+            break;
+          case "Tahoma":
+            h2R.style.fontFamily = "Tahoma";
+            break;
+          case "Cambria":
+            h2R.style.fontFamily = "Cambria";
+            break;
+          case "Cursive":
+            h2R.style.fontFamily = "cursive";
+            break;
+          case "Arial":
+            h2R.style.fontFamily = "Arial";
+            break;
+        }
+      }
+
+      function fnColor(e) {
+        var h2R = document.getElementById("h2");
+        console.log(e.target.value);
+        switch (e.target.value) {
+          case "Red":
+            h2R.style.color = "red";
+            break;
+          case "Green":
+            h2R.style.color = "green";
+            break;
+          case "Blue":
+            h2R.style.color = "blue";
+            break;
+          case "Yellow":
+            h2R.style.color = "yellow";
+            break;
+          case "Pink":
+            h2R.style.color = "pink";
+            break;
+          case "Select Font Color":
+            h2R.style.color = "black";
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="con">
+      <select name="selectSize" id="size" onchange="fnFont(event)">
+        <option value="Select Font Size">Select Font Size</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option></select
+      >&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+      <select name="selectSize" id="size" onchange="fnFamily(event)">
+        <option value="">Select Font Family</option>
+        <option value="Arial">Arial</option>
+        <option value="Calibri">Calibri</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Cambria">Cambria</option>
+        <option value="Cursive">Cursive</option></select
+      >&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+      <select name="selectColor" id="color" onchange="fnColor(event)">
+        <option value="Select Font Color">Select Font Color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Pink">Pink</option>
+      </select>
+      <h2 id="h2">JS Is Fun To Learn</h2>
+    </div>
+  </body>
+</html>
